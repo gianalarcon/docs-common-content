@@ -20,6 +20,11 @@ The following tools are recommended to begin developing on Starknet:
 |https://docs.swmansion.com/scarb/[docs.swmansion.com/scarb]
 |https://github.com/software-mansion/scarb[github.com/software-mansion/scarb]
 
+|Katana
+|An extremely fast devnet designed to support local development. 
+|https://book.dojoengine.org/toolchain/katana/overview[book.dojoengine.org]
+|https://github.com/dojoengine/dojo[github.com/dojoengine/dojo]
+
 |===
 
 [#installing_starkli]
@@ -122,3 +127,39 @@ scarb --version
 ----
 
 Scarb should now be installed.
+
+[#installing_katana]
+== Installing Katana
+
+The steps for installing Katana and upgrading Katana are identical.
+
+.Procedure
+
+. Install dojoup, the installer for the Katana toolchain:
++
+[source,shell]
+----
+curl -L https://install.dojoengine.org | bash
+----
++
+Dojoup should now be installed.
+
+. Restart the terminal.
+
+. Install Katana:
++
+[source,shell]
+----
+dojoup
+----
++
+Katana should now be installed.
+
+. Restart the terminal and run the following command to verify the installation:
++
+[source,shell]
+----
+katana --version
+----
++
+katana prints the current version.
