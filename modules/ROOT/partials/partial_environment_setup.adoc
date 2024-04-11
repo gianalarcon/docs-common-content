@@ -135,7 +135,7 @@ The steps for installing Katana and upgrading Katana are identical.
 
 .Procedure
 
-. Install dojoup, the installer for the Katana toolchain:
+. Install Dojoup, the installer for the Katana toolchain:
 +
 [source,shell]
 ----
@@ -162,4 +162,4 @@ Katana should now be installed.
 katana --version
 ----
 +
-katana prints the current version.
+Katana prints the current version.
