@@ -138,7 +138,7 @@ With starknet-devnet and starknet-devnet-rs You can do the following:
 * link:https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
 
 
-[#katana]
+[#Katana]
 == Katana
 
 [discrete]
