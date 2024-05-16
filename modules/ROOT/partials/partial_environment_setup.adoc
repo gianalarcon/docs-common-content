@@ -25,6 +25,11 @@ The following tools are recommended to begin developing on Starknet:
 |https://book.dojoengine.org/toolchain/katana/overview[book.dojoengine.org]
 |https://github.com/dojoengine/dojo[github.com/dojoengine/dojo]
 
+|Starknet Foundry
+|A toolchain for developing Starknet smart contracts. It helps with writing, deploying, and testing your smart contracts.
+|https://foundry-rs.github.io/starknet-foundry/[foundry-rs.github.io/starknet-foundry]
+|https://github.com/foundry-rs/starknet-foundry/[github.com/foundry-rs/starknet-foundry]
+
 |===
 
 [#installing_starkli]
@@ -163,3 +168,39 @@ katana --version
 ----
 +
 Katana prints the current version.
+
+[#installing_starknet_foundry]
+== Installing Starknet Foundry
+
+The steps for installing Starknet Foundry and upgrading Starknet Foundry are identical.
+
+.Procedure
+
+. Install Snfoundryup, the installer for the Starknet Foundry toolkit:
++
+[source,shell]
+----
+curl -L https://raw.githubusercontent.com/foundry-rs/starknet-foundry/master/scripts/install.sh | sh
+----
++
+Snfoundryup should now be installed.
+
+. Restart the terminal.
+
+. Install Starknet Foundry:
++
+[source,shell]
+----
+snfoundryup
+----
++
+Starknet Foundry should now be installed.
+
+. Restart the terminal and run the following command to verify the installation:
++
+[source,shell]
+----
+snforge --version
+----
++
+Starknet Foundry prints the current version.
