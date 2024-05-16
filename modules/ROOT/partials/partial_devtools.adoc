@@ -1,9 +1,9 @@
 [id="starknet_development_tools"]
 = Starknet developer tools
 
-While Starknet is a blockchain, it is different from blockchains built on the model of the Ethereum virtual machine (EVM), and so it requires many of its own developer tools. The tools discussed here are being developed in coordination with StarkWare, and in some cases have received grants from StarkWare or the Starknet Foundation in order to make the development process as friendly as possible, with improvements happening all the time.
+While Starknet is a blockchain, it is different from blockchains built on the model of the Ethereum virtual machine (EVM), and so it requires many of its own developer tools. The tools discussed here are being developed in coordination with StarkWare and, in some cases, have received grants from StarkWare or the Starknet Foundation to make the development process as friendly as possible, with improvements happening constantly.
 
-While originally the stack of Starknet development tools was based mostly on Python, tool developers are moving towards building with Rust.
+While the stack of Starknet development tools was originally based mostly on Python, tool developers are moving towards building with Rust.
 
 See xref:#tools_per_stage_of_development[] below to understand where each tool fits in the development process.
 
@@ -15,26 +15,6 @@ The tools listed here do not represent all that are available.
 [#tools_per_stage_of_development]
 .Tools for each stage of development
 image::1.0.0@docs-common-content:ROOT:image$tools_workflow.jpg[]
-
-// .Tools for each stage of development
-// |===
-// | *Coding in Cairo* | xref:#vs_code_cairo_extension[_VsCode_ + _Cairo plugin_] +
-// or +
-// xref:#starknet_remix_plugin[_Remix_ + _Cairo plugin_]
-// | *Building* | xref:#scarb[_Scarb_]
-// | *Testing and debugging* | xref:#starknet_foundry[_Foundry (Forge)_] +
-// or +
-// xref:#hardhat[_Hardhat_ + _Starknet plugin (JavaScript only)_]
-// | *Running on a devnet* |_Scarb_ for compiling and packaging +
-// xref:#starknet-devnet[_starknet-devnet_/_starknet-devnet-rs_ (local node)] +
-// or +
-// xref:#katana[_Katana_ (local node)]
-// | *Contract development* | xref:#starknet_foundry[_Foundry (Cast)_]
-// or
-// xref:#starkli[_Starkli_]
-// | *Package delivery* +
-// (Optional) | _Scarb_
-// |===
 
 [#starkli]
 == Starkli
@@ -101,17 +81,15 @@ JavaScript, TypeScript
 |Starknet-go |Go |Chainlink |Nethermind | link:https://github.com/NethermindEth/starknet.go[starknet-go Github repository]
 |===
 
-[#starknet-devnet]
-== starknet-devnet, starknet-devnet-rs
+[#starknet-devnet-rs]
+== starknet-devnet-rs
 
 [discrete]
 === What is it?
 
-A devnet is a Starknet instance that you run as a local node, which enables much quicker development than is possible using testnet, as well as providing privacy prior to launching on testnet.
+A devnet is a Starknet instance that you run as a local node. A devnet enables much quicker development than is possible using testnet, as well as providing privacy prior to launching on testnet.
 
-SpaceShard originally wrote starknet-devnet in Python, but they are now actively developing a version in Rust, starknet-devnet-rs. For now, the Python-based version is more feature-rich, with the most notable feature being the ability to fork the network at a given block, so if that’s important to you, then you need to use the Python-based version. However, starknet-devnet-rs runs more quickly, and the developers are working to bring it to feature parity with the Python-based starknet-devnet.
-
-starknet-devnet-rs is the only version that is receiving new features.
+starknet-devnet-rs can, among other features, fork the network at a given block, dump the current devnet state, and load it in a subsequent run. starknet-devnet-rs runs more quickly than the previous, Python-based starknet-devnet.
 
 [discrete]
 === Who maintains it?
@@ -121,9 +99,9 @@ SpaceShard
 [discrete]
 === Why should you care?
 
-starknet-devnet and starknet-devnet-rs include some accounts that are already funded with an ERC-20 token that can be used to pay fees. The ERC-20 contract that defines this token is also included.
+starknet-devnet-rs includes some accounts that are already funded with an ERC-20 token that can be used to pay fees. The ERC-20 contract that defines this token is also included.
 
-With starknet-devnet and starknet-devnet-rs You can do the following:
+With starknet-devnet-rs, you can do the following:
 
 * Create mock accounts.
 * Send transactions using pre-deployed, pre-funded accounts, which are included.
@@ -134,8 +112,7 @@ With starknet-devnet and starknet-devnet-rs You can do the following:
 [discrete]
 === Where do you get it?
 
-* link:https://github.com/Shard-Labs/starknet-devnet[The starknet-devnet Gitbhub repository]
-* link:https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
+link:https://github.com/0xSpaceShard/starknet-devnet-rs[The starknet-devnet-rs Github repository]
 
 
 [#Katana]

@@ -168,6 +168,11 @@ A transaction can be seen as a message containing a set of instructions that des
 
 The data describing the difference between two states. It contains information on every contract whose storage was updated and additional information on contract deployments.
 
+[#trace-cells]
+== trace cell
+
+A unit of measurement of proving complexity. In the STARK protocol, a computation is translated into an execution trace that must satisfy a collection of constraints. Every Cairo step translates to ~50 trace cells.
+
 [#verifier]
 == verifier
 
