@@ -25,10 +25,15 @@ The following tools are recommended to begin developing on Starknet:
 |https://book.dojoengine.org/toolchain/katana/overview[book.dojoengine.org]
 |https://github.com/dojoengine/dojo[github.com/dojoengine/dojo]
 
-|Starknet Foundry
+|Starknet-Foundry
 |A toolchain for developing Starknet smart contracts. It helps with writing, deploying, and testing your smart contracts.
 |https://foundry-rs.github.io/starknet-foundry/[foundry-rs.github.io/starknet-foundry]
 |https://github.com/foundry-rs/starknet-foundry/[github.com/foundry-rs/starknet-foundry]
+
+|Starknet-Devnet
+|A local testnet for Starknet in Rust.
+|https://0xspaceshard.github.io/starknet-devnet-rs/[0xspaceshard.github.io/starknet-devnet-rs]
+|https://github.com/0xSpaceShard/starknet-devnet-rs/[github.com/0xSpaceShard/starknet-devnet-rs]
 
 |===
 
@@ -204,3 +209,39 @@ snforge --version
 ----
 +
 Starknet Foundry prints the current version.
+
+[#installing_starknet_devnet]
+== Installing Starknet Devnet
+
+The steps for installing Starknet Devnet and upgrading Starknet Devnet are identical.
+
+.Procedure
+
+. Install Rust using rustup 
++
+[source,shell]
+----
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+----
++
+Rust should now be installed.
+
+. Restart the terminal.
+
+. Install Starknet Devnet:
++
+[source,shell]
+----
+cargo install starknet-devnet
+----
++
+Starknet Devnet should now be installed.
+
+. Restart the terminal and run the following command to verify the installation:
++
+[source,shell]
+----
+starknet-devnet --version
+----
++
+Starknet Devnet prints the current version.
